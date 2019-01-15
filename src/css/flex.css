@@ -1,0 +1,29 @@
+.flex-row {
+    display: flex;
+    align-items: stretch;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-items-start {
+    align-items: flex-start;
+}
+
+.flex-items-end {
+    align-items: flex-end;
+}
+
+.flex-items-center {
+    align-items: center;
+}
+
+.flex-items-stretch {
+    align-items: stretch;
+}
