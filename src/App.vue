@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="h-screen">
         <nav class="navbar flex-row">
             <button class="kloud-button w-24 h-24">
                 <img src="https://img.icons8.com/ios-glyphs/50/ffffff/menu.png">
@@ -12,57 +12,11 @@
                 <img src="https://img.icons8.com/ios-glyphs/50/ffffff/name.png">
             </button>
         </nav>
-        <div id="nav">
-            <router-link to="/">Home</router-link>
-            |
-            <router-link to="/about">About</router-link>
+        <div class="flex-col h-full">
+            <!--spacer to move content below navbar-->
+            <div class="h-32"></div>
+            <router-view class="flex-grow"/>
         </div>
-        <div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </div>
-        <router-view/>
     </div>
 </template>
 
@@ -72,7 +26,7 @@
 
 <style>
     .navbar {
-        background: #49494a;
+        background: rgba(0, 0, 0, 0.6);
         width: 100%;
         position: fixed;
     }

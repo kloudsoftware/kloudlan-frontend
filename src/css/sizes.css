@@ -1,5 +1,9 @@
 /*Widths*/
 
+.w-full {
+    width: 100%;
+}
+
 .w-8 {
     width: 1rem;
 }
@@ -16,7 +20,27 @@
     width: 4rem;
 }
 
+.w-64 {
+    width: 8rem;
+}
+
+.w-128 {
+    width: 16rem;
+}
+
+.w-256 {
+    width: 32rem;
+}
+
 /*Heights*/
+
+.h-full {
+    height: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
 
 .h-8 {
     height: 1rem;
@@ -32,4 +56,64 @@
 
 .h-32 {
     height: 4rem;
+}
+
+/*Margins*/
+
+.m-1 {
+    margin: 1rem;
+}
+
+.m-2 {
+    margin: 2rem;
+}
+
+.m-3 {
+    margin: 3rem;
+}
+
+.m-4 {
+    margin: 4rem;
+}
+
+.m-5 {
+    margin: 5rem;
+}
+
+.m-6 {
+    margin: 6rem;
+}
+
+.m-8 {
+    margin: 8rem;
+}
+
+/*Paddings*/
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.p-3 {
+    padding: 3rem;
+}
+
+.p-4 {
+    padding: 4rem;
+}
+
+.p-5 {
+    padding: 5rem;
+}
+
+.p-6 {
+    padding: 6rem;
+}
+
+.p-8 {
+    padding: 8rem;
 }
