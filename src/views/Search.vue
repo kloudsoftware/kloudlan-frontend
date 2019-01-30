@@ -1,7 +1,12 @@
 <template>
-    <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <div class="content flex-col">
+        <h1 class="">Suchergebnisse</h1>
+        <div class="h-full flex-grow flex-col flex-items-stretch">
+            <div v-for="i in 10" class="h-32 card card-hover flex-col">
+                <img class="w-16 h-16" src="../../public/games/csgo/csgo_square.jpg"/>
+            </div>
+        </div>
+        <div class="h-32"></div>
     </div>
 </template>
 
