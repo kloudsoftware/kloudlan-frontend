@@ -4,19 +4,19 @@
             <h1 class="flex-grow">Counter Strike Global Offensive</h1>
             <h3>startet in:</h3>
             <h3>00:15</h3>
-            <button>
-                Teilnehmen
-            </button>
-            <button>
-                Bearbeiten
-            </button>
         </div>
         <div class="h-full flex-grow flex-row flex-items-stretch">
             <div class="w-64 m-1 card flex-grow">
                 <img class="game-image" src="../../public/games/csgo/csgo_square_bw.jpg"/>
             </div>
             <div class="w-64 m-1 p-1 card flex-grow">
-                <h2>Details</h2>
+                <div class="flex-row">
+                    <h2 class="flex-grow">Details</h2>
+                    <button class="round-button">
+                        <!--<img src="https://img.icons8.com/ios/50/ffffff/edit-file.png">-->
+                        <img src="https://img.icons8.com/ios/50/ffffff/edit.png">
+                    </button>
+                </div>
                 <table class="w-full">
                     <tr>
                         <td><b>Spiel</b></td>
@@ -49,15 +49,25 @@
                 </p>
             </div>
             <div class="w-64 m-1 p-1 card flex-grow">
-                <h2>Teilnehmer</h2>
-                <div v-for="i in 4">
-                    <div class="flex-row">
-                        <p class="flex-grow">Team {{ i }}</p>
-                        <p>{{ i }} / 4 Spieler</p>
-                    </div>
-                    <div class="flex-row">
-                        <div v-for="j in i">
-                            <img src="https://img.icons8.com/ios/50/ffffff/name-filled.png">
+                <div class="flex-row">
+                    <h2 class="flex-grow">Teams und Teilnehmer</h2>
+                    <button class="round-button">
+                        <img src="https://img.icons8.com/ios/50/ffffff/add-user-group-man-man.png">
+                    </button>
+                </div>
+                <div class="player-list h-full">
+                    <div v-for="i in 4">
+                        <div class="flex-row">
+                            <p class="flex-grow">Team {{ i }}</p>
+                            <p>{{ i }} / 4 Spieler</p>
+                        </div>
+                        <div class="flex-row flex-items-center">
+                            <div v-for="j in i">
+                                <img src="https://img.icons8.com/ios/50/ffffff/name-filled.png">
+                            </div>
+                            <button class="round-button">
+                                <img src="https://img.icons8.com/ios/50/ffffff/add-user-male.png">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -73,6 +83,10 @@
         height: 100%;
         object-fit: fill;
         border-radius: inherit;
+    }
+
+    .player-list {
+        overflow-y: scroll;
     }
 </style>
 

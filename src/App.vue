@@ -1,17 +1,17 @@
 <template>
     <div id="app" class="app">
         <nav class="navbar flex-row">
-            <button class="navbar-button w-24 h-24">
+            <button class="round-button">
                 <img src="https://img.icons8.com/ios-glyphs/50/ffffff/menu.png">
             </button>
             <p class="flex-grow title">KloudLAN</p>
             <div class="textfield">
                 <input v-model="search" placeholder="Nach Turnieren suchen"/>
             </div>
-            <button class="navbar-button w-24 h-24">
+            <button class="round-button">
                 <img src="https://img.icons8.com/ios-glyphs/50/ffffff/search.png">
             </button>
-            <button class="navbar-button w-24 h-24">
+            <button class="round-button">
                 <img src="https://img.icons8.com/ios-glyphs/50/ffffff/name.png">
             </button>
         </nav>
@@ -40,23 +40,6 @@
         position: fixed;
         padding: 0.5rem 0;
         box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
-    }
-
-    .navbar-button {
-        background: none;
-        border: none;
-        border-radius: 2rem;
-        padding: 0.65rem;
-        cursor: pointer;
-    }
-
-    .navbar-button > img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .navbar-button:hover {
-        background: rgba(255, 255, 255, 0.2);
     }
 
     .title {
