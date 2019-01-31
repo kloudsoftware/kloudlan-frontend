@@ -10,6 +10,12 @@ body {
     color: white;
 }
 
+a {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    text-decoration-line: none;
+    color: white;
+}
+
 .kloud-button {
     background: none;
     border: none;
