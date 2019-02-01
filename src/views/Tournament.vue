@@ -86,7 +86,7 @@
     }
 
     .player-list {
-        overflow-y: scroll;
+        /*overflow-y: scroll;*/
     }
 </style>
 
