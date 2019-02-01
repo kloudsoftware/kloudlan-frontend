@@ -2,7 +2,7 @@ body {
     margin: 0;
     height: 100vh;
     /*background: url("../../public/background/generic.jpg");*/
-    background: url("../../public/games/csgo/csgo_background_1.jpg");
+    background: url("../../public/games/csgo/csgo_background_1.jpg") fixed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
