@@ -4,20 +4,20 @@
         <div class="background"></div>
 
         <nav class="navbar">
-            <div class="flex-row">
+            <div class="flex-row flex-items-center h-full">
                 <button class="round-button" @click="showMenu = !showMenu">
-                    <img src="https://img.icons8.com/ios-glyphs/50/ffffff/menu.png">
+                    <img class="h-full" src="https://img.icons8.com/ios-glyphs/50/ffffff/menu.png">
                 </button>
                 <p class="flex-grow title">KloudLAN</p>
                 <div class="textfield">
                     <input v-model="search" placeholder="Nach Turnieren suchen"/>
                 </div>
-                <button class="round-button">
+                <router-link class="round-button" to="/search">
                     <img src="https://img.icons8.com/ios-glyphs/50/ffffff/search.png">
-                </button>
-                <button class="round-button">
+                </router-link>
+                <router-link class="round-button" to="/profile">
                     <img src="https://img.icons8.com/ios-glyphs/50/ffffff/name.png">
-                </button>
+                </router-link>
             </div>
         </nav>
 
@@ -51,13 +51,17 @@
                     <img src="https://img.icons8.com/ios/50/ffffff/settings.png">
                     <p>Einstellungen</p>
                 </router-link>
+                <router-link class="menu-item" to="/about">
+                    <img src="https://img.icons8.com/ios/50/ffffff/about.png">
+                    <p>Über KloudLAN</p>
+                </router-link>
             </div>
         </div>
 
         <div class="flex-col h-full">
             <!--spacer to move content below navbar-->
             <div class="h-32"></div>
-            <router-view class="flex-grow"/>
+            <router-view class="flex-grow p-4"/>
         </div>
     </div>
 </template>
@@ -126,7 +130,7 @@
 
     .menu-item > img {
         height: 1.75rem;
-        padding-right: 1rem;
+        padding-right: 1.5rem;
     }
 
     .textfield {

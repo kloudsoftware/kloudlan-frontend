@@ -1,5 +1,5 @@
 <template>
-    <div class="flex-col p-4">
+    <div class="flex-col">
         <div class="m-1 flex-row flex-items-center">
             <h1 class="flex-grow">Counter Strike Global Offensive</h1>
             <h3>startet in:</h3>

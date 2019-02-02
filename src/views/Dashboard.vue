@@ -1,5 +1,5 @@
 <template>
-    <div class="flex-col p-4">
+    <div class="flex-col">
         <div class="h-full flex-grow flex-row flex-items-stretch">
             <router-link to="details" v-for="i in 4" class="w-64 flex-grow card m-1 card-hover flex-col">
                 <img class="dashboard-image-bw" src="../../public/games/csgo/csgo_square_bw.jpg"/>
