@@ -6,22 +6,12 @@
                 <div class="card">
                     <p>Nach Spielen filtern</p>
                     <div class="flex-row">
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                    </div>
-                    <div class="flex-row">
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
-                        <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
+                        <img class="h-24 pr-1" src="../../public/games/csgo/cover.jpg"/>
+                        <img class="h-24 pr-1" src="../../public/games/csgo/cover.jpg"/>
+                        <img class="h-24 pr-1" src="../../public/games/csgo/cover.jpg"/>
+                        <img class="h-24 pr-1" src="../../public/games/csgo/cover.jpg"/>
+                        <img class="h-24 pr-1" src="../../public/games/csgo/cover.jpg"/>
+                        <img class="h-24 pr-1" src="../../public/games/csgo/cover.jpg"/>
                     </div>
 
                     <p>Startzeit</p>
@@ -61,7 +51,7 @@
                     <tr v-for="i in 20" @click="$router.push(`details?tournamentid=${i}`)">
                         <td>
                             <div class="flex-row flex-items-center">
-                                <img class="h-24 pr-1" src="../../public/games/csgo/csgo_square.jpg"/>
+                                <img class="h-24 pr-1" src="../../public/games/csgo/cover.jpg"/>
                                 <p>Counter Strike: Global Offensive</p>
                             </div>
                         </td>

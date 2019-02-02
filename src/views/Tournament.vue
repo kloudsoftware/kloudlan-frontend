@@ -7,7 +7,7 @@
         </div>
         <div class="h-full flex-grow flex-row flex-items-stretch">
             <div class="w-64 m-1 card flex-grow">
-                <img class="game-image" src="../../public/games/csgo/csgo_square_bw.jpg"/>
+                <img class="game-image" src="../../public/games/csgo/cover-bw.jpg"/>
             </div>
             <div class="w-64 m-1 p-1 card flex-grow">
                 <div class="flex-row">

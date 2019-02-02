@@ -3,8 +3,8 @@
         <div class="h-full flex-grow flex-row flex-items-stretch">
             <router-link to="details" v-for="i in 4"
                          class="w-64 flex-grow card m-1 card-hover flex-col image-hover-parent">
-                <img class="dashboard-image image-normal" src="../../public/games/csgo/csgo_square_bw.jpg"/>
-                <img class="dashboard-image image-hover" src="../../public/games/csgo/csgo_square.jpg"/>
+                <img class="dashboard-image image-normal" src="../../public/games/csgo/cover-bw.jpg"/>
+                <img class="dashboard-image image-hover" src="../../public/games/csgo/cover.jpg"/>
                 <div class="p-1">
                     <div class="flex-row flex-items-center">
                         <h3>Counter Strike Go</h3>
@@ -20,8 +20,8 @@
             <div class="w-128 p-1 flex-grow">
                 <div class="card flex-col h-full">
                     <div v-for="i in 7" class="card-hover dashboard-list-item image-hover-parent">
-                        <img class="image-normal" src="../../public/games/csgo/csgo_square_bw.jpg"/>
-                        <img class="image-hover" src="../../public/games/csgo/csgo_square.jpg"/>
+                        <img class="image-normal" src="../../public/games/csgo/cover-bw.jpg"/>
+                        <img class="image-hover" src="../../public/games/csgo/cover.jpg"/>
                         <p class="flex-grow">Counter Strike Go</p>
                         <p>in {{ i }} Minuten</p>
                     </div>

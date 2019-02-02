@@ -4,8 +4,8 @@
             <h1 class="m-1">Welches Spiel möchtest du spielen?</h1>
             <div class="game-list">
                 <router-link to="details" v-for="i in 20" class="card card-hover image-hover-parent game-list-item">
-                    <img class="image-normal" src="../../public/games/csgo/csgo_square_bw.jpg"/>
-                    <img class="image-hover" src="../../public/games/csgo/csgo_square.jpg"/>
+                    <img class="image-normal" src="../../public/games/lol/cover-bw.jpg"/>
+                    <img class="image-hover" src="../../public/games/lol/cover.jpg"/>
                 </router-link>
             </div>
         </div>
