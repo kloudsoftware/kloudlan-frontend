@@ -8,7 +8,7 @@
                 <button class="round-button" @click="showMenu = !showMenu">
                     <img class="h-full" src="https://img.icons8.com/ios-glyphs/50/ffffff/menu.png">
                 </button>
-                <p class="flex-grow title">KloudLAN</p>
+                <router-link to="/" class="flex-grow title">KloudLAN</router-link>
                 <div class="textfield">
                     <input v-model="search" placeholder="Nach Turnieren suchen"/>
                 </div>
@@ -27,7 +27,7 @@
                     <img src="https://img.icons8.com/ios/50/ffffff/home-page.png">
                     <p>Startseite</p>
                 </router-link>
-                <router-link class="menu-item" to="/details">
+                <router-link class="menu-item" to="/create">
                     <img src="https://img.icons8.com/ios/50/ffffff/plus.png">
                     <p>Turnier erstellen</p>
                 </router-link>
@@ -149,11 +149,16 @@
 </style>
 
 <script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator';
+    import {Component, Vue, Watch} from 'vue-property-decorator';
 
     @Component({})
     export default class App extends Vue {
         private showMenu = false;
         private search = "";
+
+        @Watch('$route')
+        private onRouteChanged() {
+            this.showMenu = false;
+        }
     }
 </script>

@@ -13,8 +13,10 @@
                 <div class="flex-row">
                     <h2 class="flex-grow">Details</h2>
                     <button class="round-button">
-                        <!--<img src="https://img.icons8.com/ios/50/ffffff/edit-file.png">-->
                         <img src="https://img.icons8.com/ios/50/ffffff/edit.png">
+                    </button>
+                    <button class="round-button">
+                        <img src="https://img.icons8.com/ios/50/ffffff/delete.png">
                     </button>
                 </div>
                 <table class="w-full">

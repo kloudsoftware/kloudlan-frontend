@@ -1,9 +1,10 @@
 <template>
     <div class="flex-col">
         <div class="h-full flex-grow flex-row flex-items-stretch">
-            <router-link to="details" v-for="i in 4" class="w-64 flex-grow card m-1 card-hover flex-col">
-                <img class="dashboard-image-bw" src="../../public/games/csgo/csgo_square_bw.jpg"/>
-                <img class="dashboard-image-color" src="../../public/games/csgo/csgo_square.jpg"/>
+            <router-link to="details" v-for="i in 4"
+                         class="w-64 flex-grow card m-1 card-hover flex-col image-hover-parent">
+                <img class="dashboard-image image-normal" src="../../public/games/csgo/csgo_square_bw.jpg"/>
+                <img class="dashboard-image image-hover" src="../../public/games/csgo/csgo_square.jpg"/>
                 <div class="p-1">
                     <div class="flex-row flex-items-center">
                         <h3>Counter Strike Go</h3>
@@ -18,8 +19,9 @@
             </router-link>
             <div class="w-128 p-1 flex-grow">
                 <div class="card flex-col h-full">
-                    <div v-for="i in 7" class="card-hover dashboard-list-item">
-                        <img src="../../public/games/csgo/csgo_square_bw.jpg"/>
+                    <div v-for="i in 7" class="card-hover dashboard-list-item image-hover-parent">
+                        <img class="image-normal" src="../../public/games/csgo/csgo_square_bw.jpg"/>
+                        <img class="image-hover" src="../../public/games/csgo/csgo_square.jpg"/>
                         <p class="flex-grow">Counter Strike Go</p>
                         <p>in {{ i }} Minuten</p>
                     </div>
@@ -31,25 +33,10 @@
 </template>
 
 <style>
-    .dashboard-image-bw {
+    .dashboard-image {
         width: 100%;
         border-top-left-radius: 0.3rem;
         border-top-right-radius: 0.3rem;
-    }
-
-    .dashboard-image-color {
-        width: 100%;
-        border-top-left-radius: 0.3rem;
-        border-top-right-radius: 0.3rem;
-        display: none;
-    }
-
-    .card:hover .dashboard-image-bw {
-        display: none;
-    }
-
-    .card:hover .dashboard-image-color {
-        display: block;
     }
 
     .dashboard-list-item {

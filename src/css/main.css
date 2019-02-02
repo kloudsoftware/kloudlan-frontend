@@ -1,8 +1,9 @@
 body {
     margin: 0;
     height: 100vh;
-    /*background: url("../../public/background/generic.jpg");*/
-    background: url("../../public/games/csgo/csgo_background_1.jpg") fixed;
+    /*background: url("../../public/background/generic.jpg") no-repeat fixed;*/
+    background: url("../../public/games/csgo/csgo_background_1.jpg") no-repeat fixed;
+    background-size: cover;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -82,4 +83,19 @@ button.round-button {
 
 .card-hover:hover {
     background: rgba(66, 66, 66, 0.95);
+}
+
+.image-normal {
+}
+
+.image-hover {
+    display: none;
+}
+
+.image-hover-parent:hover .image-normal {
+    display: none;
+}
+
+.image-hover-parent:hover .image-hover {
+    display: inline-block;
 }

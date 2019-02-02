@@ -14,18 +14,27 @@ export default new Router({
         {
             path: '/search',
             name: 'search',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
             component: () => import(/* webpackChunkName: "about" */ './views/Search.vue'),
         },
         {
             path: '/details',
             name: 'details',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
             component: () => import(/* webpackChunkName: "about" */ './views/Tournament.vue'),
+        },
+        {
+            path: '/create',
+            name: 'create',
+            component: () => import(/* webpackChunkName: "about" */ './views/TournamentCreate.vue'),
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+        },
+        {
+            path: '/profile',
+            name: 'profile',
+            component: () => import(/* webpackChunkName: "about" */ './views/Profile.vue'),
         },
     ],
 });
