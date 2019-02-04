@@ -14,12 +14,12 @@ export default new Router({
         {
             path: '/search',
             name: 'search',
-            component: () => import(/* webpackChunkName: "about" */ './views/Search.vue'),
+            component: () => import(/* webpackChunkName: "about" */ './views/TournamentSearch.vue'),
         },
         {
             path: '/details',
             name: 'details',
-            component: () => import(/* webpackChunkName: "about" */ './views/Tournament.vue'),
+            component: () => import(/* webpackChunkName: "about" */ './views/TournamentView.vue'),
         },
         {
             path: '/create',

@@ -5,10 +5,8 @@
             <div class="game-list">
                 <router-link to="details" v-for="game in $store.getters.getGames"
                              class="card card-hover image-hover-parent game-list-item">
-                    <img class="image-hover" :src="game.coverimgbw"/>
-                    <img class="image-normal" :src="game.coverimg"/>
-                    <!--<img class="image-normal" src="../../public/games/lol/cover-bw.jpg"/>-->
-                    <!--<img class="image-hover" src="../../public/games/lol/cover.jpg"/>-->
+                    <img class="image-normal" :src="game.coverimgbw"/>
+                    <img class="image-hover" :src="game.coverimg"/>
                 </router-link>
             </div>
         </div>

@@ -13,12 +13,21 @@ class Store {
 export default new Vuex.Store({
     state: new Store(),
     getters: {
-        getTournaments: state => {
-            return state.tournaments;
-        },
         getGames: state => {
             return state.games;
         },
+        getAllTournaments: state => {
+            return state.tournaments;
+        },
+        getNextTournaments: state => {
+            return state.tournaments;
+        },
+        getTorunamentsMatchingFilter: state => (filter: string) => {
+            return state.tournaments.filter(t => t.title.includes(filter));
+        },
+        getTournamentById: state => (id: string) => {
+            return state.tournaments.filter(t => t.title === id)[0];
+        }
     },
     mutations: {
         refreshGames(state) {
@@ -27,22 +36,37 @@ export default new Vuex.Store({
             state.games.push({
                 name: 'Counter Strike',
                 backgroundimg: require('./../public/games/csgo/background-1.jpg'),
-                coverimgbw: require('./../public/games/csgo/cover.jpg'),
-                coverimg: require('./../public/games/csgo/cover-bw.jpg'),
+                coverimgbw: require('./../public/games/csgo/cover-bw.jpg'),
+                coverimg: require('./../public/games/csgo/cover.jpg'),
             });
             state.games.push({
                 name: 'League of Legends',
                 backgroundimg: require('./../public/games/lol/background-1.jpg'),
-                coverimgbw: require('./../public/games/lol/cover.jpg'),
-                coverimg: require('./../public/games/lol/cover-bw.jpg'),
+                coverimgbw: require('./../public/games/lol/cover-bw.jpg'),
+                coverimg: require('./../public/games/lol/cover.jpg'),
             });
         },
 
         refreshTournaments(state) {
-            // const newTournament = {
-            //     game: 'Tournament X',
-            //     players: 12,
-            // }
+            for (let i = 0; i < 20; i += state.games.length) {
+                state.games.forEach(game => {
+                    state.tournaments.push({
+                        id: i,
+                        title: `${game.name} Tournament ${i}`,
+                        description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+                        game: game,
+                        creator: {
+                            name: 'Malte',
+                            steamProfilePicture: '',
+                            steamProfileURL: '',
+                        },
+                        time: '12:00',
+                        mode: 'Turnier',
+                        location: 'Turnierrechner',
+                        teams: [],
+                    });
+                });
+            }
         },
     },
     actions: {

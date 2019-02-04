@@ -1,14 +1,14 @@
 <template>
     <div class="flex-col">
-        <div class="background default-background"></div>
+        <div class="background default-background" :style="'background: {{ tournament.game.backgroundimg }}'"></div>
         <div class="m-1 flex-row flex-items-center">
             <h1 class="flex-grow">Counter Strike Global Offensive</h1>
             <h3>startet in:</h3>
             <h3>00:15</h3>
         </div>
-        <div class="h-full flex-grow flex-row flex-items-stretch">
+        <div v-if="tournament !== null" class="h-full flex-grow flex-row flex-items-stretch">
             <div class="w-64 m-1 card flex-grow">
-                <img class="game-image" src="../../public/games/csgo/cover-bw.jpg"/>
+                <img class="game-image" :src="tournament.game.coverimgbw"/>
             </div>
             <div class="w-64 m-1 p-1 card flex-grow">
                 <div class="flex-row">
@@ -23,32 +23,27 @@
                 <table class="w-full">
                     <tr>
                         <td><b>Spiel</b></td>
-                        <td>Counter Strike: Global Offensive</td>
+                        <td>{{ tournament.game.name }}</td>
                     </tr>
                     <tr>
                         <td><b>Modus</b></td>
-                        <td>Ausscheidungs - Turnier</td>
+                        <td>{{ tournament.mode }}</td>
                     </tr>
                     <tr>
                         <td><b>Ort</b></td>
-                        <td>Turnierrechner</td>
+                        <td>{{ tournament.location }}</td>
                     </tr>
                     <tr>
                         <td><b>Erstellt von</b></td>
-                        <td>Spieler 1</td>
+                        <td>{{ tournament.creator.name }}</td>
                     </tr>
                     <tr>
                         <td><b>Startet</b></td>
-                        <td>12:00</td>
+                        <td>{{ tournament.time }}</td>
                     </tr>
                 </table>
                 <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    {{ tournament.description }}
                 </p>
             </div>
             <div class="w-64 m-1 p-1 card flex-grow">
@@ -95,9 +90,16 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
+    import {Tournament} from "../types/tournament";
 
     @Component({})
-    export default class Tournament extends Vue {
+    export default class TournamentView extends Vue {
 
+        private tournament: Tournament = null;
+
+        public created() {
+            const tournamentid = this.$route.query.tournament;
+            this.tournament = this.$store.getters.getTournamentById(tournamentid);
+        }
     }
 </script>

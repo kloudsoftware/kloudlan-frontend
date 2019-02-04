@@ -4,6 +4,8 @@
             <div class="flex-col m-1 filter">
                 <h1>Filter</h1>
                 <div class="card">
+                    <input v-model="filter"/>
+
                     <p>Nach Spielen filtern</p>
                     <div class="flex-row">
                         <img class="h-24 pr-1" src="../../public/games/csgo/cover.jpg"/>
@@ -33,9 +35,6 @@
                     </div>
                 </div>
             </div>
-            <div class="w-256">
-
-            </div>
             <div class="flex-grow flex-col m-1">
                 <h1>Turniere</h1>
                 <table class="card" cellspacing="0" cellpadding="0">
@@ -48,21 +47,22 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="i in 20" @click="$router.push(`details?tournamentid=${i}`)">
+                    <tr v-for="t in $store.getters.getTorunamentsMatchingFilter(filter)"
+                        @click="$router.push(`details?tournament=${t.title}`)">
                         <td>
                             <div class="flex-row flex-items-center">
-                                <img class="h-24 pr-1" src="../../public/games/csgo/cover.jpg"/>
-                                <p>Counter Strike: Global Offensive</p>
+                                <img class="h-24 pr-1" :src="t.game.coverimg"/>
+                                <p>{{ t.title }}</p>
                             </div>
                         </td>
                         <td>
                             <div class="flex-row flex-items-center">
                                 <img class="h-24 pr-1" src="https://img.icons8.com/ios/50/ffffff/name-filled.png">
-                                <p>Spieler x</p>
+                                <p>{{ t.creator.name }}</p>
                             </div>
                         </td>
-                        <td>{{ i }} Teilnehmer</td>
-                        <td>00:05</td>
+                        <td>{{ 0 }} Teilnehmer</td>
+                        <td>{{ t.time }}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -75,8 +75,7 @@
 
 <style>
     .filter {
-        position: fixed;
-        z-index: -1;
+        /*position: fixed;*/
     }
 </style>
 
@@ -84,7 +83,7 @@
     import {Component, Vue} from 'vue-property-decorator';
 
     @Component({})
-    export default class Search extends Vue {
-
+    export default class TournamentSearch extends Vue {
+        private filter: string = '';
     }
 </script>
