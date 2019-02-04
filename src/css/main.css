@@ -1,7 +1,6 @@
 body {
-    background: url("../../public/background/generic-3.jpg") rgba(48, 48, 48, 0.8) no-repeat fixed center;
+    background: url("../../public/background/generic.jpg") no-repeat fixed center;
     background-size: cover;
-    background-blend-mode: darken;
     margin: 0;
     height: 100vh;
     -webkit-font-smoothing: antialiased;
@@ -35,10 +34,9 @@ tbody > tr:hover {
     cursor: pointer;
 }
 
-.default-background {
+.game-background {
     background-size: cover;
     background-blend-mode: multiply;
-    background: rgba(48, 48, 48, 0.8) url("../../public/games/lol/background-2.jpg") no-repeat fixed center;
     z-index: -1;
     position: fixed;
     width: 100%;

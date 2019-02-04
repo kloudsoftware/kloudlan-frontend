@@ -2,12 +2,18 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import {Tournament} from "@/types/tournament";
 import {Game} from "@/types/game";
+import {Player} from "@/types/player";
 
 Vue.use(Vuex);
 
 class Store {
     tournaments: Tournament[] = [];
     games: Game[] = [];
+    user: Player = {
+        name: 'Malte',
+        steamProfileURL: '',
+        steamProfilePicture: '',
+    };
 }
 
 export default new Vuex.Store({
@@ -48,18 +54,14 @@ export default new Vuex.Store({
         },
 
         refreshTournaments(state) {
-            for (let i = 0; i < 20; i += state.games.length) {
+            for (let i = 1; i < 10; i++) {
                 state.games.forEach(game => {
                     state.tournaments.push({
                         id: i,
                         title: `${game.name} Tournament ${i}`,
                         description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
                         game: game,
-                        creator: {
-                            name: 'Malte',
-                            steamProfilePicture: '',
-                            steamProfileURL: '',
-                        },
+                        creator: state.user,
                         time: '12:00',
                         mode: 'Turnier',
                         location: 'Turnierrechner',

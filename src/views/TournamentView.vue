@@ -1,6 +1,7 @@
 <template>
     <div class="flex-col">
-        <div class="background default-background" :style="'background: {{ tournament.game.backgroundimg }}'"></div>
+        <div class="game-background"
+             :style="'background: rgba(24, 24, 24, 0.99) url(' + tournament.game.backgroundimg + ') no-repeat fixed'"></div>
         <div class="m-1 flex-row flex-items-center">
             <h1 class="flex-grow">Counter Strike Global Offensive</h1>
             <h3>startet in:</h3>
@@ -95,6 +96,7 @@
     @Component({})
     export default class TournamentView extends Vue {
 
+        private backgroundimg = '../../public/games/lol/background-2.jpg';
         private tournament: Tournament = null;
 
         public created() {
