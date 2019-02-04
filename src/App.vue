@@ -76,14 +76,6 @@
         height: 100vh;
     }
 
-    .background {
-        width: 100%;
-        height: 100%;
-        background: rgba(48, 48, 48, 0.8);
-        position: fixed;
-        z-index: -1;
-    }
-
     .navbar {
         position: fixed;
         background: rgba(48, 48, 48, 1);
@@ -155,6 +147,10 @@
     export default class App extends Vue {
         private showMenu = false;
         private search = "";
+
+        private created() {
+            this.$store.commit('refreshGames');
+        }
 
         @Watch('$route')
         private onRouteChanged() {
