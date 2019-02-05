@@ -36,7 +36,7 @@ tbody > tr:hover {
 
 .game-background {
     background-size: cover;
-    background-blend-mode: multiply;
+    /*background-blend-mode: multiply;*/
     z-index: -1;
     position: fixed;
     width: 100%;

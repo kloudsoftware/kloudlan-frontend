@@ -1,9 +1,8 @@
 <template>
     <div class="flex-col">
-        <div class="game-background"
-             :style="'background: rgba(24, 24, 24, 0.99) url(' + tournament.game.backgroundimg + ') no-repeat fixed'"></div>
+        <div class="game-background" :style="getBackgroundClass()"></div>
         <div class="m-1 flex-row flex-items-center">
-            <h1 class="flex-grow">Counter Strike Global Offensive</h1>
+            <h1 class="flex-grow">{{ tournament.title }}</h1>
             <h3>startet in:</h3>
             <h3>00:15</h3>
         </div>
@@ -102,6 +101,10 @@
         public created() {
             const tournamentid = this.$route.query.tournament;
             this.tournament = this.$store.getters.getTournamentById(tournamentid);
+        }
+
+        private getBackgroundClass(): string {
+            return 'background: rgba(24, 24, 24, 0.99) url(' + this.tournament.game.backgroundimg + ') no-repeat fixed; background-size: cover;'
         }
     }
 </script>
